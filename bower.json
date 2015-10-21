@@ -1,0 +1,20 @@
+{
+  "name": "expess-ngComponentBased-ES6-starter",
+  "version": "0.0.0",
+  "authors": [
+    "Qianyue XIE"
+  ],
+  "description": "a starter ES6 project for express, angular(1.X but based on components) and mongoDB, so called MEAN JS.",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "ES6",
+    "angular"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "traceur-runtime": "~0.0.92",
+    "system.js": "~0.19.5"
+  }
+}
