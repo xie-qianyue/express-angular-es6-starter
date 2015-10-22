@@ -1,11 +1,10 @@
 <!doctype html>
-<!--[if IE 9]>         <html lang="en-gb" class="lt-ie10"> <![endif]-->
-<!--[if gt IE 9]><!--> <html lang="en-gb"> <!--<![endif]-->
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>ES6 + AngularJS</title>
+  <title>express-ng-es6</title>
   <base href="/">
-  <link rel="stylesheet" href="/main.css">
+  <!-- <link rel="stylesheet" href="/main.css"> -->
 </head>
 <body data-main-app ng-cloak>
   <!--[if lt IE 10]>
@@ -22,17 +21,23 @@
     </div>
   </noscript>
 
-  <ui-view name="site-header"></ui-view>
-  <ui-view></ui-view>
+<!--   <ui-view name="site-header"></ui-view>
+  <ui-view></ui-view> -->
 
-  <script src="/assets/js/traceur-runtime.js"></script>
-  <script src="/assets/js/es6-module-loader.src.js"></script>
-  <script src="/assets/js/system.src.js"></script>
+  <app>
+  loading...
+  </app>
+
+  <script src="app/assets/js/traceur-runtime.min.js"></script>
+  <script src="app/assets/js/es6-module-loader.src.js"></script>
+  <script src="app/assets/js/system.src.js"></script>
 
   <script src="/loader.config.js"></script>
+
   <script>
     System.baseURL = '/';
     System.import('app/bootstrap');
-  </script>
+  </script>  
+
 </body>
 </html>

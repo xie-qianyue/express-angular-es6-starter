@@ -7,7 +7,7 @@ const router = require('express').Router();
 router.get('/*', (req, res) => {
     res.sendFile('index.html', {
         // Go up to the 'public' foler 
-        root: __dirname + '/../public/'
+        root: __dirname + '/../../client/'
     });
 });
 

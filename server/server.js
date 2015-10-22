@@ -1,7 +1,7 @@
 'use strict';
 
 const express = require('express');
-const errorHandler = require('errorHandler');
+const errorHandler = require('errorhandler');
 const bodyParser = require('body-parser');
 const app = express();
 
@@ -14,7 +14,7 @@ app.set('port', process.env.PORT || 3000);
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 // serve the static files
-app.use(express.static('public'));
+app.use(express.static('client'));
 // match the api url with a prefix '/api'
 app.use('/api', api);
 app.use('/', webRouter);
