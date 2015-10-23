@@ -14,9 +14,8 @@
   "license": "MIT",
   "homepage": "",
   "dependencies": {
-    "traceur-runtime": "~0.0.92",
-    "system.js": "~0.19.5",
     "angular": "~1.4.7",
-    "angular-ui-router": "~0.2.15"
+    "angular-ui-router": "~0.2.15",
+    "normalize-css": "normalize.css#~3.0.3"
   }
 }
