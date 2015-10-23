@@ -1,8 +1,7 @@
 module.exports = {
-  entry: './client/app/app.js',
   devtool: 'sourcemap',
   output: {
-    filename: './client/bundle.js'
+    filename: 'bundle.js'
   },
   // resolve: {
   //   // tells webpack to query these directories for modules
