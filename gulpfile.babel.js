@@ -22,14 +22,14 @@ let resolveToApp = (glob) => {
   return path.join(root, 'app', glob); // app/{glob}
 };
 
-let resolveToComponents = (glob) => {
-  glob = glob || '';
-  return path.join(root, 'app/components', glob); // app/components/{glob}
-};
+// let resolveToComponents = (glob) => {
+//   glob = glob || '';
+//   return path.join(root, 'app/components', glob); // app/components/{glob}
+// };
 
 // map of all paths
 let paths = {
-  js: resolveToComponents('**/*!(.spec.js).js'), // exclude spec files
+  js: resolveToApp('**/*.js'), // all the js under app
   styl: resolveToApp('**/*.styl'), // stylesheets
   html: [
     resolveToApp('**/*.html'),

@@ -2,3 +2,9 @@ bower_components/*
 node_modules/*
 client/bundle.js
 client/bundle.js.map
+client/*.ttf
+client/*.eot
+client/*.woff
+client/*.woff2
+client/*.svg
+**/.DS_Store
