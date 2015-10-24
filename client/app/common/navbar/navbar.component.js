@@ -1,6 +1,6 @@
 import template from './navbar.html';
 import controller from './navbar.controller';
-import './navbar.styl';
+// import './navbar.styl';
 
 let navbarComponent = function () {
   return {

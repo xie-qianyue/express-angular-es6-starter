@@ -1,14 +1,26 @@
 import angular from 'angular';
-import uiRouter from 'angular-ui-router';
-import Common from './components/common/common';
+// import uiRouter from 'angular-ui-router';
+import Common from './common/common';
 import Components from './components/components';
-import AppComponent from './app.component';
+// import AppComponent from './app.component';
 // import 'normalize.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import './app.css';
+
+import template from './app.html';
+// import './app.styl';
+
+let appComponent = () => {
+  return {
+    template,
+    restrict: 'E'
+  };
+};
 
 angular.module('app', [
-  uiRouter,
+  // uiRouter,
   Common.name,
-  Components.name
-]).run();
+  Components.name 
+])
 
-// .directive('app', AppComponent);
+.directive('app', appComponent);
