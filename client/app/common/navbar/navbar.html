@@ -1,8 +1,17 @@
 <nav class="navbar">
-  <div class="logo">
-    <h1><a ui-sref="home">{{ vm.name }}</a></h1>
-  </div>
-  <div class="nav-links">
-    <span><a ui-sref="about">about</a></span>
-  </div>
+                <a class="navbar-brand" ui-sref="/">Express 4X + Angular 1.X</a>
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a ui-sref="home">Home</a>
+                    </li>
+                    <li>
+                        <a ui-sref="todo">Local Todo Sample</a>
+                    </li>
+                    <li>
+                        <a ui-sref="mongoTodo">Mongo Todo Sample</a>
+                    </li>
+                    <li>
+                        <a ui-sref="about">About</a>
+                    </li>
+                </ul>
 </nav>
