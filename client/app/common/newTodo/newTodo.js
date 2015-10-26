@@ -3,7 +3,7 @@ import angular from 'angular';
 import newTodoComponent from './newTodo.component';
 
 let newTodoModule = angular.module('newTodo', [
-  // uiRouter
+    // uiRouter
 ])
 
 .directive('newTodo', newTodoComponent);

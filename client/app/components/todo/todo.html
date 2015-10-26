@@ -1,14 +1,14 @@
 <navbar></navbar>
-<div id="todoapp"> 
+<div id="todoapp">
     <header>
         <h1>todos</h1>
         <new-todo></new-todo>
     </header>
     <sector id="main" ng-show="todoCtrl.todos.length" ng-cloak>
-    	<todo-list item-list="todoCtrl.todos"></todo-list>
-   </sector>
-       <footer id="footer" ng-show="todoCtrl.todos.length" ng-cloak>
-       	<todo-footer remain-count="todoCtrl.todos.length"></todo-footer>   
+        <todo-list item-list="todoCtrl.todos"></todo-list>
+    </sector>
+    <footer id="footer" ng-show="todoCtrl.todos.length" ng-cloak>
+        <todo-footer remain-count="todoCtrl.todos.length"></todo-footer>
     </footer>
 </div>
 

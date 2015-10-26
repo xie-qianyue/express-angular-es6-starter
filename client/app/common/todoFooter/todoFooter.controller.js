@@ -1,6 +1,5 @@
 class TodoFooterController {
-  constructor() {
-  }
+    constructor() {}
 }
 
 export default TodoFooterController;

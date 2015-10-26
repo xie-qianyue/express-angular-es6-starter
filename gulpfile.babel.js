@@ -10,8 +10,9 @@ import sync     from 'run-sequence';
 // import fs       from 'fs';
 // import yargs    from 'yargs';
 // import lodash   from 'lodash';
-
 import nodemon from 'gulp-nodemon';
+import beautify from 'gulp-beautify';
+import prettify from 'gulp-html-prettify';
 
 // let reload = () => serve.reload();
 let root = 'client';
@@ -87,4 +88,25 @@ gulp.task('start', function () {
   nodemon({
     script: './server/server.js'
   })
-})
+});
+
+gulp.task('beautify-js', function() {
+    return gulp.src(resolveToApp('**/*.js'), {
+            base: './' // save the original path 
+        })
+        .pipe(beautify())
+        .pipe(gulp.dest('./'));
+});
+
+gulp.task('prettify-html', function() {
+    return gulp.src([resolveToApp('**/*.html')], {
+            base: './' // save the original path 
+        })
+        .pipe(prettify())
+        .pipe(gulp.dest('./'));
+});
+
+gulp.task('beautify', function() {
+    gulp.start('beautify-js', 'prettify-html');
+});
+

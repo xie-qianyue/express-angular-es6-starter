@@ -11,16 +11,16 @@ import template from './app.html';
 // import './app.styl';
 
 let appComponent = () => {
-  return {
-    template,
-    restrict: 'E'
-  };
+    return {
+        template,
+        restrict: 'E'
+    };
 };
 
 angular.module('app', [
-  // uiRouter,
-  Common.name,
-  Components.name 
+    // uiRouter,
+    Common.name,
+    Components.name
 ])
 
 .directive('app', appComponent);
