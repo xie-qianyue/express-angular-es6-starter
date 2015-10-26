@@ -11,8 +11,6 @@ class TodoController {
     }
 
     //remainingCount = $filter('filter')(todos, { completed: false }).length;
-
-
 }
 
 export default TodoController;

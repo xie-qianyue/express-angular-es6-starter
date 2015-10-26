@@ -1,7 +1,5 @@
 class NewTodoController {
-    constructor() {
-        // this.name = 'newTodo';
-    }
+    constructor() {}
 
     addTodo() {
         console.log('add');
