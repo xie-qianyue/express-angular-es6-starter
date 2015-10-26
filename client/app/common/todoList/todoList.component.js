@@ -1,6 +1,6 @@
 import template from './todoList.html';
 import controller from './todoList.controller';
-//import './todoList.styl';
+import './todoList.css';
 
 let todoListComponent = function () {
   return {

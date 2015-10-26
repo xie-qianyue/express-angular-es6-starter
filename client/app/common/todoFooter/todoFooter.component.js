@@ -1,6 +1,6 @@
 import template from './todoFooter.html';
 import controller from './todoFooter.controller';
-//import './todoFooter.styl';
+import './todoFooter.css';
 
 let todoFooterComponent = function () {
   return {

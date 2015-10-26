@@ -1,6 +1,6 @@
 import template from './newTodo.html';
 import controller from './newTodo.controller';
-// import './newTodo.styl';
+import './newTodo.css';
 
 let newTodoComponent = function () {
   return {
