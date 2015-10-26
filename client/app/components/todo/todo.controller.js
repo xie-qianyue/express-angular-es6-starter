@@ -10,7 +10,17 @@ class TodoController {
         }];
     }
 
-    //remainingCount = $filter('filter')(todos, { completed: false }).length;
+    addTodo(newTodo) {
+        this.todos.push(newTodo);
+    }
+
+    editTodo(origin, newTodo) {
+        this.todos[this.todos.indexOf(origin)] = newTodo;
+    }
+
+    removeTodo(todo) {
+        this.todos.splice(this.todos.indexOf(todo), 1);
+    }
 }
 
 export default TodoController;

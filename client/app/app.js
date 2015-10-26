@@ -1,7 +1,7 @@
 import angular from 'angular';
 import Common from './common/common';
 import Components from './components/components';
-import 'normalize.css';
+// import 'normalize.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import './app.css';
 

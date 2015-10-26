@@ -2,7 +2,16 @@ class NewTodoController {
     constructor() {}
 
     addTodo() {
-        console.log('add');
+        let newTodo = {
+            title: this.newTodo.trim(),
+            completed: false
+        };
+        if (!newTodo.title) {
+            return;
+        }
+
+        this.onAddTodo({newTodo: newTodo});        
+        this.newTodo = '';
     }
 }
 

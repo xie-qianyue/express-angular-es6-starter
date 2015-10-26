@@ -10,7 +10,9 @@ let todoListComponent = function() {
         controller,
         controllerAs: 'todoListCtrl',
         bindToController: {
-            itemList: '='
+            itemList: '=',
+            onSaveEdits: '&',
+            onRemoveTodo: '&'
         }
     };
 };

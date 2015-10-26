@@ -2,10 +2,10 @@
 <div id="todoapp">
     <header>
         <h1>todos</h1>
-        <new-todo></new-todo>
+        <new-todo on-add-todo="todoCtrl.addTodo(newTodo)"></new-todo>
     </header>
     <sector id="main" ng-show="todoCtrl.todos.length" ng-cloak>
-        <todo-list item-list="todoCtrl.todos"></todo-list>
+        <todo-list item-list="todoCtrl.todos" on-save-edits="todoCtrl.editTodo(origin, newTodo)" on-remove-todo="todoCtrl.removeTodo(todo)"></todo-list>
     </sector>
     <footer id="footer" ng-show="todoCtrl.todos.length" ng-cloak>
         <todo-footer remain-count="todoCtrl.todos.length"></todo-footer>

@@ -8,8 +8,11 @@ let newTodoComponent = function() {
         scope: {},
         template,
         controller,
-        controllerAs: 'ctrl',
-        bindToController: true
+        controllerAs: 'newTodoCtrl',
+        bindToController: {
+        	newTodo : '=',
+        	onAddTodo: '&'
+        }
     };
 };
 
