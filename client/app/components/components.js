@@ -5,6 +5,7 @@ import Todo from './todo/todo';
 import NewTodo from './newTodo/newTodo';
 import TodoFooter from './todoFooter/todoFooter';
 import TodoList from './todoList/todoList';
+import TodoMongo from './todoMongo/todoMongo';
 
 let componentModules = angular.module('components', [
     Home.name,
@@ -12,7 +13,8 @@ let componentModules = angular.module('components', [
     Todo.name,
     NewTodo.name,
     TodoFooter.name,
-    TodoList.name
+    TodoList.name,
+    TodoMongo.name
 ]);
 
 export default componentModules;

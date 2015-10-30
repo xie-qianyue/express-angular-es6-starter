@@ -1,6 +1,6 @@
 let UserFactory = function() {
 
-    getTodos() {
+    let getTodos = ()=>{
 
         let def = $q.defer();
 
@@ -16,7 +16,7 @@ let UserFactory = function() {
         return def.promise;
     }
 
-    createTodo(todo) {
+    let createTodo = (todo)=>{
 
         let def = $q.defer();
 
@@ -32,7 +32,7 @@ let UserFactory = function() {
         return def.promise;
     }
 
-    deleteTodo(todoId) {
+   let deleteTodo = (todoId)=>{
         let def = $q.defer();
 
         $http.delete('/api/todos/' + todoId)
@@ -47,14 +47,14 @@ let UserFactory = function() {
         return def.promise;
     }
 
-    editTodo(todo) {
+    let editTodo = (todo)=>{
         $http.put('/api/todos', todo)
             .error(function(data) {
                 console.log('Error: ' + data);
             });
     }
 
-    completeTodo(todo) {
+    let completeTodo = (todo)=>{
         $http.put('/api/todos/completed', todo)
             .error(function(data) {
                 console.log('Error: ' + data);
