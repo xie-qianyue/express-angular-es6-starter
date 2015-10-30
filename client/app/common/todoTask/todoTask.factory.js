@@ -1,6 +1,6 @@
 let UserFactory = function() {
-    // Return a promise object.
-    getTodo() {
+
+    getTodos() {
 
         let def = $q.defer();
 
@@ -62,7 +62,7 @@ let UserFactory = function() {
     }
 
     return {
-        getTodo,
+        getTodos,
         createTodo,
         deleteTodo,
         editTodo,
