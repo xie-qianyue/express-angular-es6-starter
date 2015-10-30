@@ -10,7 +10,9 @@ class NewTodoController {
             return;
         }
 
-        this.onAddTodo({newTodo: newTodo});        
+        this.onAddTodo({
+            newTodo: newTodo
+        });
         this.newTodo = '';
     }
 }

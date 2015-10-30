@@ -34,7 +34,10 @@ class TodoListController {
             return;
         }
 
-        this.onSaveEdits({origin:this.originalTodo, newTodo:todo});
+        this.onSaveEdits({
+            origin: this.originalTodo,
+            newTodo: todo
+        });
 
         this.editedTodo = null;
     }
@@ -54,7 +57,9 @@ class TodoListController {
     }
 
     removeTodo(todo) {
-        this.onRemoveTodo({todo:todo});        
+        this.onRemoveTodo({
+            todo: todo
+        });
     }
 
     revertEdits(todo) {

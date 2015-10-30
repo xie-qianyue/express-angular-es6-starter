@@ -109,4 +109,3 @@ gulp.task('prettify-html', function() {
 gulp.task('beautify', function() {
     gulp.start('beautify-js', 'prettify-html');
 });
-

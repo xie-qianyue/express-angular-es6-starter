@@ -10,8 +10,8 @@ let newTodoComponent = function() {
         controller,
         controllerAs: 'newTodoCtrl',
         bindToController: {
-        	newTodo : '=',
-        	onAddTodo: '&'
+            newTodo: '=',
+            onAddTodo: '&'
         }
     };
 };
