@@ -10,10 +10,10 @@ let todoMongoModule = angular.module('todoMongo', [
     $stateProvider
         .state('todoMongo', {
             url: '/todoMongo',
-            template: '<todoMongo></todoMongo>'
+            template: '<todomongo></todomongo>'
         });
 })
 
-.directive('todoMongo', todoMongoComponent);
+.directive('todomongo', todoMongoComponent);
 
 export default todoMongoModule;
