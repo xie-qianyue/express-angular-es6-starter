@@ -3,6 +3,6 @@ import todoTaskFactory from './todoTask.factory';
 
 let todoTaskModule = angular.module('todoTask', [])
 
-.factory('TodoTask', todoTaskFactory);
+.factory('todoTask', todoTaskFactory);
 
 export default todoTaskModule;

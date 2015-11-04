@@ -1,4 +1,4 @@
-let UserFactory = function() {
+let todoTaskFactory = function($http, $q) {
 
     let getTodos = ()=>{
 
@@ -70,4 +70,4 @@ let UserFactory = function() {
     };
 };
 
-export default UserFactory;
+export default todoTaskFactory;
