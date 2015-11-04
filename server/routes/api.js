@@ -1,9 +1,10 @@
 'use strict';
 
 const mongoose = require('mongoose');
-const api = require('express').Router();
+const configDB = require('./../config/database.js');
+mongoose.connect(configDB.url);
 
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost');
+const api = require('express').Router();
 
 // Define the shcema.
 const todoSchema = new mongoose.Schema({
@@ -47,19 +48,12 @@ api.post('/todos', (req, res) => {
 // Delete a todo item.
 api.delete('/todos/:todo_id', (req, res) => {
 	Todo.remove({
-		_id : req.params.todo_id
-	}, (err, todo) => {
+			_id : req.params.todo_id
+		}, (err) => {
 		if (err) {
 			res.send(err);
 		}
-
-        // Get and return all the todos after delete.
-        Todo.find((err, todos) => {
-        	if (err) {
-        		res.send(err);
-        	}
-        	res.json(todos);
-        });
+		res.status(200).end();
     });
 });
 
