@@ -30,7 +30,8 @@ api.post('/todos', (req, res) => {
 	Todo.create({
 		title : req.body.title,
 		completed : false
-	}, (err) => {
+	}, 
+	err => {
 		if (err) {
 			res.send(err);
 		}
@@ -49,7 +50,8 @@ api.post('/todos', (req, res) => {
 api.delete('/todos/:todo_id', (req, res) => {
 	Todo.remove({
 			_id : req.params.todo_id
-		}, (err) => {
+		}, 
+		err => {
 		if (err) {
 			res.send(err);
 		}
@@ -64,7 +66,7 @@ api.put('/todos', (req, res) => {
 	Todo.update(
 		{_id: req.body._id}, 
 		{title: req.body.title},
-		(err) => {
+		err => {
 			if (err) {
 				res.send(err);
 			}
@@ -78,7 +80,7 @@ api.put('/todos/completed', (req, res) => {
 	Todo.update(
 		{_id: req.body._id},
 		{completed: req.body.completed},
-		(err) => {
+		err => {
 			if (err) {
 				res.send(err);
 			}
