@@ -1,9 +1,7 @@
 class TodoListController {
     constructor() {
-        // this.itemList = [];
         this.editedTodo = null;
         this.originalTodo = null;
-        this.allChecked = !this.remainingCount;
         this.saveEvent = null;
         this.reverted = null;
     }
@@ -42,17 +40,9 @@ class TodoListController {
         this.editedTodo = null;
     }
 
-    toggleCompleted(todo, completed) {
-        if (angular.isDefined(completed)) {
-            todo.completed = completed;
-        }
-    }
-
     markAll(completed) {
-        this.itemList.forEach((todo) => {
-            if (todo.completed !== completed) {
-                toggleCompleted(todo, completed);
-            }
+        this.onMarkAll({
+            completed: completed
         });
     }
 

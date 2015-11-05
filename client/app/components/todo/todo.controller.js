@@ -1,5 +1,5 @@
 class TodoController {
-    constructor() {
+    constructor($scope, $filter) {
         // Use local storage.
         this.todos = [{
             title: 'Express 4X',
@@ -8,6 +8,13 @@ class TodoController {
             title: 'Angular 1.3',
             completed: false
         }];
+
+    $scope.$watch(
+        () => { return this.todos}, 
+        () => {
+            this.remainingCount = $filter('filter')(this.todos, { completed: false }).length;
+            this.allChecked = !this.remainingCount;
+    }, true);
     }
 
     addTodo(newTodo) {
@@ -20,6 +27,20 @@ class TodoController {
 
     removeTodo(todo) {
         this.todos.splice(this.todos.indexOf(todo), 1);
+    }
+
+    markAll(completed) {
+        this.todos.forEach(todo => {
+            if (todo.completed !== completed) {
+                this.toggleCompleted(todo, completed);
+            }
+        })
+    }
+
+    toggleCompleted(todo, completed) {
+        if (typeof completed === 'boolean') {
+            todo.completed = completed;
+        }
     }
 }
 

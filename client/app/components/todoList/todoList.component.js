@@ -12,7 +12,9 @@ let todoListComponent = function() {
         bindToController: {
             itemList: '=',
             onSaveEdits: '&',
-            onRemoveTodo: '&'
+            onRemoveTodo: '&',
+            onMarkAll: '&',
+            allChecked: '='
         }
     };
 };

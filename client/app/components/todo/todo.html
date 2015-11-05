@@ -5,10 +5,10 @@
         <new-todo on-add-todo="todoCtrl.addTodo(newTodo)"></new-todo>
     </header>
     <sector id="main" ng-show="todoCtrl.todos.length" ng-cloak>
-        <todo-list item-list="todoCtrl.todos" on-save-edits="todoCtrl.editTodo(origin, newTodo)" on-remove-todo="todoCtrl.removeTodo(todo)"></todo-list>
+        <todo-list item-list="todoCtrl.todos" on-save-edits="todoCtrl.editTodo(origin, newTodo)" on-remove-todo="todoCtrl.removeTodo(todo)" on-mark-all="todoCtrl.markAll(completed)" all-checked="todoCtrl.allChecked"></todo-list>
     </sector>
-    <footer id="footer" ng-show="todoCtrl.todos.length" ng-cloak>
-        <todo-footer remain-count="todoCtrl.todos.length"></todo-footer>
+    <footer id="footer" ng-show="todoCtrl.remainingCount" ng-cloak>
+        <todo-footer remain-count="todoCtrl.remainingCount"></todo-footer>
     </footer>
 </div>
 
