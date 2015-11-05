@@ -5,27 +5,27 @@ let todoTaskFactory = function($http, $q) {
         let def = $q.defer();
 
         $http.get('/api/todos')
-            .success(function(data) {
+            .success(data => {
                 def.resolve(data);
             })
-            .error(function(data) {
-                console.log('Error: ' + data);
+            .error(errMsg =>  {
+                console.log('Error: ' + errMsg);
                 def.reject('Failed to get todos');
             });
 
         return def.promise;
     }
 
-    let createTodo = (todo)=>{
+    let createTodo = (todo) => {
 
         let def = $q.defer();
 
         $http.post('/api/todos', todo)
-            .success(function(data) {
+            .success(data => {
                 def.resolve(data);
             })
-            .error(function(data) {
-                console.log('Error: ' + data);
+            .error(errMsg => {
+                console.log('Error: ' + errMsg);
                 def.reject('Failed to add todo : ' + todo.title);
             });
 
@@ -36,11 +36,11 @@ let todoTaskFactory = function($http, $q) {
         let def = $q.defer();
 
         $http.delete('/api/todos/' + todoId)
-            .success(function(data) {
+            .success(data => {
                 def.resolve(data);
             })
-            .error(function(data) {
-                console.log('Error: ' + data);
+            .error(errMsg => {
+                console.log('Error: ' + errMsg);
                 def.reject('Failed to delete todo with id : ' + todoId);
             });
 
@@ -49,15 +49,15 @@ let todoTaskFactory = function($http, $q) {
 
     let editTodo = (todo)=>{
         $http.put('/api/todos', todo)
-            .error(function(data) {
-                console.log('Error: ' + data);
+            .error(errMsg => {
+                console.log('Error: ' + errMsg);
             });
     }
 
     let completeTodo = (todo)=>{
         $http.put('/api/todos/completed', todo)
-            .error(function(data) {
-                console.log('Error: ' + data);
+            .error(errMsg => {
+                console.log('Error: ' + errMsg);
             });
     }
 
