@@ -3,20 +3,21 @@ import controller from './todoList.controller';
 import './todoList.css';
 
 let todoListComponent = function() {
-    return {
-        restrict: 'E',
-        scope: {},
-        template,
-        controller,
-        controllerAs: 'todoListCtrl',
-        bindToController: {
-            itemList: '=',
-            onSaveEdits: '&',
-            onRemoveTodo: '&',
-            onMarkAll: '&',
-            allChecked: '='
-        }
-    };
+  return {
+    restrict: 'E',
+    scope: {},
+    template,
+    controller,
+    controllerAs: 'todoListCtrl',
+    bindToController: {
+      itemList: '=',
+      onSaveEdits: '&',
+      onRemoveTodo: '&',
+      onMarkAll: '&',
+      allChecked: '=',
+      onToggleCompleted: '&'
+    }
+  };
 };
 
 export default todoListComponent;

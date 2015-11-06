@@ -7,11 +7,11 @@ let todoMongoModule = angular.module('todoMongo', [
 ])
 
 .config(($stateProvider, $urlRouterProvider) => {
-    $stateProvider
-        .state('todoMongo', {
-            url: '/todoMongo',
-            template: '<todomongo></todomongo>'
-        });
+  $stateProvider
+    .state('todoMongo', {
+      url: '/todoMongo',
+      template: '<todomongo></todomongo>'
+    });
 })
 
 .directive('todomongo', todoMongoComponent);

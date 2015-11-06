@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = {
-    'url': process.env.MONGOLAB_URI || 'mongodb://localhost/todo'
+  'url': process.env.MONGOLAB_URI || 'mongodb://localhost/todo'
 }

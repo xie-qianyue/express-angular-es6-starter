@@ -8,13 +8,13 @@ import TodoList from './todoList/todoList';
 import TodoMongo from './todoMongo/todoMongo';
 
 let componentModules = angular.module('components', [
-    Home.name,
-    About.name,
-    Todo.name,
-    NewTodo.name,
-    TodoFooter.name,
-    TodoList.name,
-    TodoMongo.name
+  Home.name,
+  About.name,
+  Todo.name,
+  NewTodo.name,
+  TodoFooter.name,
+  TodoList.name,
+  TodoMongo.name
 ]);
 
 export default componentModules;

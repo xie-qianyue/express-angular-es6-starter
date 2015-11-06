@@ -1,5 +1,5 @@
 class NavbarController {
-    constructor() {}
+  constructor() {}
 }
 
 export default NavbarController;
