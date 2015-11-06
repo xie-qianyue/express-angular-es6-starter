@@ -65,7 +65,7 @@ let todoTaskFactory = function($http, $q) {
         console.log('Error: ' + errMsg);
         def.reject();
       });
-      
+
     return def.promise;
   }
 

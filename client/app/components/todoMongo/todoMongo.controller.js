@@ -22,7 +22,7 @@ class TodoMongoController {
       () => {
         return this.todos
       }, () => {
-        
+
         this.remainingCount = $filter('filter')(this.todos, {
           completed: false
         }).length;
@@ -78,9 +78,9 @@ class TodoMongoController {
   toggleCompleted(todo, completed) {
     todo.completed = completed;
     this.todoTask.completeTodo(todo)
-          .then(() => {
-            todo.completed = completed;
-          });
+      .then(() => {
+        todo.completed = completed;
+      });
   }
 }
 
