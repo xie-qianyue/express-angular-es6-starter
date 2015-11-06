@@ -4,41 +4,36 @@ import gulp     from 'gulp';
 import webpack  from 'webpack-stream';
 import path     from 'path';
 import sync     from 'run-sequence';
-// import serve    from 'browser-sync';
-// import rename   from 'gulp-rename';
-// import template from 'gulp-template';
-// import fs       from 'fs';
-// import yargs    from 'yargs';
-// import lodash   from 'lodash';
-import nodemon from 'gulp-nodemon';
+import nodemon  from 'gulp-nodemon';
 import beautify from 'gulp-beautify';
 import prettify from 'gulp-html-prettify';
 
-// let reload = () => serve.reload();
-let root = 'client';
+let client = 'client';
+let server = 'server';
 
-// helper method for resolving paths
-let resolveToApp = (glob) => {
+// helper method for resolving client paths
+let resolveToClient = (glob) => {
   glob = glob || '';
-  return path.join(root, 'app', glob); // app/{glob}
+  return path.join(client, 'app', glob); // app/{glob}
 };
 
-// let resolveToComponents = (glob) => {
-//   glob = glob || '';
-//   return path.join(root, 'app/components', glob); // app/components/{glob}
-// };
+// helper method for resolving server paths
+let resolveToServer = (glob) => {
+  glob = glob || '';
+  return path.join(server, glob); // app/{glob}
+};
 
 // map of all paths
 let paths = {
-  js: resolveToApp('**/*.js'), // all the js under app
-  styl: resolveToApp('**/*.styl'), // stylesheets
+  clientJS: resolveToClient('**/*.js'), // client js
+  serverJS: resolveToServer('**/*.js'), // server js
+  css: resolveToClient('**/*.css'), // stylesheets
   html: [
-    resolveToApp('**/*.html'),
-    path.join(root, 'index.html')
+    resolveToClient('**/*.html'),
+    path.join(client, 'index.html')
   ],
-  entry: path.join(root, 'app/app.js'),
-  output: root
-  // ,blankTemplates: path.join(__dirname, 'generator', 'component/**/*.**')
+  entry: path.join(client, 'app/app.js'),
+  output: client
 };
 
 // use webpack.config.js to build modules
@@ -48,37 +43,10 @@ gulp.task('webpack', () => {
     .pipe(gulp.dest(paths.output));
 });
 
-// gulp.task('serve', () => {
-//   serve({
-//     port: process.env.PORT || 3000,
-//     open: false,
-//     server: { baseDir: root }
-//   });
-// });
-
 gulp.task('watch', () => {
-  let allPaths = [].concat([paths.js], paths.html, [paths.styl]);
+  let allPaths = [].concat(paths.clientJS, paths.serverJS, paths.html, paths.css);
   gulp.watch(allPaths, ['webpack']);
 });
-
-// gulp.task('component', () => {
-//   let cap = (val) => {
-//     return val.charAt(0).toUpperCase() + val.slice(1);
-//   };
-//   let name = yargs.argv.name;
-//   let parentPath = yargs.argv.parent || '';
-//   let destPath = path.join(resolveToComponents(), parentPath, name);
-
-//   return gulp.src(paths.blankTemplates)
-//     .pipe(template({
-//       name: name,
-//       upCaseName: cap(name)
-//     }))
-//     .pipe(rename((path) => {
-//       path.basename = path.basename.replace('temp', name);
-//     }))
-//     .pipe(gulp.dest(destPath));
-// });
 
 gulp.task('default', (done) => {
   sync('webpack', 'start', 'watch', done);
@@ -91,18 +59,18 @@ gulp.task('start', function () {
 });
 
 gulp.task('beautify-js', function() {
-    return gulp.src(resolveToApp('**/*.js'), {
+    return gulp.src([paths.clientJS, paths.serverJS], {
             base: './' // save the original path 
         })
-        .pipe(beautify())
+        .pipe(beautify({indent_size: 2}))
         .pipe(gulp.dest('./'));
 });
 
 gulp.task('prettify-html', function() {
-    return gulp.src([resolveToApp('**/*.html')], {
+    return gulp.src(paths.html, {
             base: './' // save the original path 
         })
-        .pipe(prettify())
+        .pipe(prettify({indent_size: 2}))
         .pipe(gulp.dest('./'));
 });
 
