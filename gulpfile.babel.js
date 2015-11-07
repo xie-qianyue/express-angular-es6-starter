@@ -48,10 +48,6 @@ gulp.task('watch', () => {
   gulp.watch(allPaths, ['webpack']);
 });
 
-gulp.task('default', (done) => {
-  sync('webpack', 'start', 'watch', done);
-});
-
 gulp.task('start', function () {
   nodemon({
     script: './server/server.js'
@@ -76,4 +72,8 @@ gulp.task('prettify-html', function() {
 
 gulp.task('beautify', function() {
     gulp.start('beautify-js', 'prettify-html');
+});
+
+gulp.task('default', (done) => {
+  sync('beautify', 'webpack', 'start', 'watch', done);
 });
