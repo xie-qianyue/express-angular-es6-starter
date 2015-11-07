@@ -1,14 +1,14 @@
 <navbar></navbar>
 <div id="todoapp">
-    <header>
-        <h1>todos</h1>
-        <new-todo on-add-todo="todoCtrl.addTodo(newTodo)"></new-todo>
-    </header>
-    <sector id="main" ng-show="todoCtrl.todos.length" ng-cloak>
-        <todo-list item-list="todoCtrl.todos" on-save-edits="todoCtrl.editTodo(origin, newTodo)" on-remove-todo="todoCtrl.removeTodo(todo)" on-mark-all="todoCtrl.markAll(completed)" all-checked="todoCtrl.allChecked" on-toggle-completed="todoCtrl.toggleCompleted(todo, completed)"></todo-list>
-    </sector>
-    <footer id="footer" ng-show="todoCtrl.remainingCount" ng-cloak>
-        <todo-footer remain-count="todoCtrl.remainingCount"></todo-footer>
-    </footer>
+  <header>
+    <h1>todos</h1>
+    <new-todo on-add-todo="todoCtrl.addTodo(newTodo)"></new-todo>
+  </header>
+  <sector id="main" ng-show="todoCtrl.todos.length" ng-cloak>
+    <todo-list item-list="todoCtrl.todos" on-save-edits="todoCtrl.editTodo(origin, newTodo)" on-remove-todo="todoCtrl.removeTodo(todo)" on-mark-all="todoCtrl.markAll(completed)" all-checked="todoCtrl.allChecked" on-toggle-completed="todoCtrl.toggleCompleted(todo, completed)"></todo-list>
+  </sector>
+  <footer id="footer" ng-show="todoCtrl.remainingCount" ng-cloak>
+    <todo-footer remain-count="todoCtrl.remainingCount"></todo-footer>
+  </footer>
 </div>
 
