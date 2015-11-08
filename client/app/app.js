@@ -1,7 +1,7 @@
 import angular from 'angular';
 import Common from './common/common';
 import Components from './components/components';
-// import 'normalize.css';
+import 'normalize-css/normalize.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import './app.css';
 
@@ -15,7 +15,6 @@ let appComponent = () => {
 };
 
 angular.module('app', [
-  // uiRouter,
   Common.name,
   Components.name
 ])

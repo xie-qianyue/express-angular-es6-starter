@@ -23,6 +23,7 @@ class TodoMongoController {
         return this.todos
       }, () => {
 
+        // recalculate the number of remaining items
         this.remainingCount = $filter('filter')(this.todos, {
           completed: false
         }).length;

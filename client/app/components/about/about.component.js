@@ -7,7 +7,7 @@ let aboutComponent = function() {
     scope: {},
     template,
     controller,
-    controllerAs: 'vm',
+    controllerAs: 'ctrl',
     bindToController: true
   };
 };
