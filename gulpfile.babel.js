@@ -14,7 +14,7 @@ let server = 'server';
 // helper method for resolving client paths
 let resolveToClient = (glob) => {
   glob = glob || '';
-  return path.join(client, 'app', glob); // clinet/app/{glob}
+  return path.join(client, 'app', glob); // client/app/{glob}
 };
 
 // helper method for resolving server paths
