@@ -14,20 +14,20 @@ let server = 'server';
 // helper method for resolving client paths
 let resolveToClient = (glob) => {
   glob = glob || '';
-  return path.join(client, 'app', glob); // app/{glob}
+  return path.join(client, 'app', glob); // clinet/app/{glob}
 };
 
 // helper method for resolving server paths
 let resolveToServer = (glob) => {
   glob = glob || '';
-  return path.join(server, glob); // app/{glob}
+  return path.join(server, glob); // server/{glob}
 };
 
 // map of all paths
 let paths = {
   clientJS: resolveToClient('**/*.js'), // client js
   serverJS: resolveToServer('**/*.js'), // server js
-  css: resolveToClient('**/*.css'), // stylesheets
+  css: resolveToClient('**/*.css'),
   html: [
     resolveToClient('**/*.html'),
     path.join(client, 'index.html')
