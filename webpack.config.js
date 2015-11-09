@@ -5,7 +5,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, exclude: [/node_modules/, /bower_components/, /server/], loader: 'babel' },
+      { test: /\.js$/, exclude: [/node_modules/, /server/], loader: 'babel' },
       { test: /\.html$/, loader: 'raw' },
       { test: /\.css$/, loader: 'style-loader!css-loader' },
       { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
