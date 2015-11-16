@@ -25,5 +25,9 @@ Here is a list of tools using in the project :
 * [express-angular-starter](https://github.com/xie-qianyue/express-angular-starter)
 * [NG6-starter](https://github.com/AngularClass/NG6-starter)
 
+## Todo
+* Live Demo
+* Unit Test 
+
 ## License
 MIT
