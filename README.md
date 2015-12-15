@@ -15,6 +15,9 @@ Here is a list of tools using in the project :
 * use [gulp](gulpjs.com/) to coordinate the tasks.
 * use [gulp-nodemon](https://www.npmjs.com/package/gulp-nodemon) to integate nodemon in gulp task.
 
+### Live Demo
+Here is a [live demo](http://es6-node-ng-starter.herokuapp.com/) hosted in heroku.
+
 ## Install
 * `npm install`
 
@@ -26,7 +29,7 @@ Here is a list of tools using in the project :
 * [NG6-starter](https://github.com/AngularClass/NG6-starter)
 
 ## Todo
-* Live Demo
+* <del>Live Demo</del>
 * Unit Test 
 
 ## License
