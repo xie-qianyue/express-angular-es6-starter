@@ -1,4 +1,4 @@
-class TodoMongoController {
+class TodoPageController {
   constructor(todoTask, $scope, $filter) {
 
     this.todos = [];
@@ -37,7 +37,6 @@ class TodoMongoController {
   }
 
   addTodo(newTodo) {
-    console.log('mongo add');
     this.todoTask.createTodo(newTodo)
       .then(
         data => {
@@ -85,4 +84,4 @@ class TodoMongoController {
   }
 }
 
-export default TodoMongoController;
+export default TodoPageController;

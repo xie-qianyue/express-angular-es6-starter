@@ -71,9 +71,9 @@ gulp.task('prettify-html', function() {
 });
 
 gulp.task('beautify', function() {
-    gulp.start('beautify-js', 'prettify-html');
+    sync(['beautify-js', 'prettify-html']);
 });
 
 gulp.task('default', (done) => {
-  sync('beautify', 'webpack', 'start', 'watch', done);
+  sync('webpack', 'start', 'watch', done);
 });

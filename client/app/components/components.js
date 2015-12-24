@@ -4,7 +4,7 @@ import About from './about/about';
 import NewTodo from './newTodo/newTodo';
 import TodoFooter from './todoFooter/todoFooter';
 import TodoList from './todoList/todoList';
-import TodoMongo from './todoMongo/todoMongo';
+import TodoPage from './todoPage/todoPage';
 
 let componentModules = angular.module('components', [
   Home.name,
@@ -12,7 +12,7 @@ let componentModules = angular.module('components', [
   NewTodo.name,
   TodoFooter.name,
   TodoList.name,
-  TodoMongo.name
+  TodoPage.name
 ]);
 
 export default componentModules;
