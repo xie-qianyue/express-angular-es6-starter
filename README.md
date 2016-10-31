@@ -14,6 +14,7 @@ Here is a list of tools using in the project :
 * use [webpack-bootstrap](https://github.com/theodybrothers/webpack-bootstrap) to integrate bootstrap styles.
 * use [gulp](gulpjs.com/) to coordinate the tasks.
 * use [gulp-nodemon](https://www.npmjs.com/package/gulp-nodemon) to integate nodemon in gulp task.
+* use [eslint](http://eslint.org/) for linting.
 
 ### Live Demo
 Here is a [live demo](http://es6-node-ng-starter.herokuapp.com/) hosted in heroku.

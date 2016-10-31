@@ -6,3 +6,4 @@ client/*.eot
 client/*.woff
 client/*.woff2
 client/*.svg
+npm-debug.log

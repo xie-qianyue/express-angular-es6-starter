@@ -1,6 +1,6 @@
 {
   "name": "express-ngComponentBased-ES6-starter",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "a starter ES6 project for express, angular(1.X but based on components) and mongoDB, so called MEAN JS.  ",
   "main": "./server/server.js",
   "scripts": {
